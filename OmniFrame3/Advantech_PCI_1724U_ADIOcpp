@@ -1,0 +1,7 @@
+#include "Advantech_PCI_1724U_ADIO.h"
+
+Advantech_PCI_1724U_ADIO::Advantech_PCI_1724U_ADIO()
+{
+
+}
+
