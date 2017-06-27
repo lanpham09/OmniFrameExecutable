@@ -32,7 +32,19 @@ SOURCES += main.cpp\
     PositionProducer.cpp \
     OrientationProducer.cpp \
     ../OmniFrame2/arduino.cpp \
-    Setup.cpp
+    Setup.cpp \
+    ../Sandbox/Controls/DiscreteController.cpp \
+    ../Sandbox/Devices/MultipleOmnimagnetSystem.cpp \
+    ../Sandbox/GUI/Vector_Label.cpp \
+    ../Sandbox/GUI/InterfaceButtons.cpp \
+    ConstantPositionProducer.cpp \
+    TwoOmnimagnet_SingularDirectionProducer.cpp \
+    DirectionProducer.cpp \
+    Configuration5DOF_FromFile.cpp \
+    Configuration5DOF_Producer.cpp \
+    TransformationConfiguration5DOF_Producer.cpp \
+    MagneticToolProducer.cpp \
+    SinglePerminantMagnetTool.cpp
 
 
 
@@ -46,10 +58,23 @@ HEADERS  += mainwindow.h \
     PositionProducer.h \
     OrientationProducer.h \
     ../OmniFrame2/arduino.h \
-    Setup.h
+    Setup.h \
+    ../Sandbox/Controls/DiscreteController.h \
+    ../Sandbox/Devices/MultipleOmnimagnetSystem.h \
+    ../Sandbox/GUI/Vector_Label.h \
+    ../Sandbox/GUI/InterfaceButtons.h \
+    ConstantPositionProducer.h \
+    ../Sandbox/Producers/FieldForceProducer.h \
+    TwoOmnimagnet_SingularDirectionProducer.h \
+    DirectionProducer.h \
+    Configuration5DOF_FromFile.h \
+    Configuration5DOF_Producer.h \
+    TransformationConfiguration5DOF_Producer.h \
+    MagneticToolProducer.h \
+    SinglePerminantMagnetTool.h
 
 
-
+FORMS    += mainwindow.ui
 
 
 

@@ -24,6 +24,33 @@ public:
 
     // Omnimagnets and System
     MultipleOmnimagnetSetup systemSetup;
+    deviceInhibit* systemInhibit;
+    autoInhibit* systemAutoInhibit;
+    MultipleOmnimagnetSystem* omnimagSystem;
+
+    // Producers
+    DirectionProducer* goalDirection;
+    ConstantPositionProducer* toolLocation;
+    MagneticToolProducer* toolProducer;
+    PositionProducer* goalLocation;
+    TransformedConfiguration5DOF_producer* goalPose;
+    SinglePerminantMagnetTool* magneticTool;
+    TwoOmnimagnet_SingularDirectionProducer* goodDirection;
+
+    // Transforms
+    HomogeneousTransform TrajectoryToWorld;
+
+    // trajectory
+    Configuration5DOF_FromFile* trajectory_PositionProducer;
+
+    // Controller
+    DiscreteVectorController* positionController;
+
+    // MISC Sensors & Signals
+    analogVectorTimeStampedSignal* desiredForce;
+
+    //Functions
+    void OFF();
 };
 
 #endif // SETUP_H
