@@ -16,8 +16,13 @@
 
 #include "Controls/DiscreteController.h"
 
-class Setup
+#include <ArduinoSetup.h>
+#include <QTimer>
+
+class Setup: public QObject
 {
+    Q_OBJECT
+
 public:
     Setup();
     ~Setup();
@@ -27,6 +32,8 @@ public:
     deviceInhibit* systemInhibit;
     autoInhibit* systemAutoInhibit;
     MultipleOmnimagnetSystem* omnimagSystem;
+
+    ArduinoSetup* Arduinos;
 
     // Producers
     DirectionProducer* goalDirection;
@@ -40,17 +47,26 @@ public:
     // Transforms
     HomogeneousTransform TrajectoryToWorld;
 
-    // trajectory
-    Configuration5DOF_FromFile* trajectory_PositionProducer;
+    // Trajectory
+    Configuration5DOF_Producer* trajectory_PositionProducer;
 
     // Controller
     DiscreteVectorController* positionController;
 
     // MISC Sensors & Signals
     analogVectorTimeStampedSignal* desiredForce;
+    AD_IO::analogSensor*  p_powerSignal;
+
+    // Data logging
+    fileLogger* fileLog;
 
     //Functions
     void OFF();
+    QTimer updateTimer;
+
+private slots:
+
+    void updateConfiguration();
 };
 
 #endif // SETUP_H
