@@ -17,8 +17,9 @@ MOC_DIR = ./BIN/
 QMAKE_CXXFLAGS	 += -g -Wall -std=c++0x
 
 INCLUDEPATH += ../Sandbox \
-
+                ../Sandbox/Demo\
 DEPENDPATH += ../Sandbox \
+                ../Sanbox/Demo\
 
 
 SOURCES += main.cpp\
@@ -31,7 +32,6 @@ SOURCES += main.cpp\
     Configuration6DOF_Producer.cpp \
     PositionProducer.cpp \
     OrientationProducer.cpp \
-    ../OmniFrame2/arduino.cpp \
     Setup.cpp \
     ../Sandbox/Controls/DiscreteController.cpp \
     ../Sandbox/Devices/MultipleOmnimagnetSystem.cpp \
@@ -44,7 +44,12 @@ SOURCES += main.cpp\
     Configuration5DOF_Producer.cpp \
     TransformationConfiguration5DOF_Producer.cpp \
     MagneticToolProducer.cpp \
-    SinglePerminantMagnetTool.cpp
+    SinglePerminantMagnetTool.cpp \
+    ArduinoSetup.cpp \
+    ../Sandbox/Demos/Field_and_Force_Demo.cpp \
+    ../Sandbox/Demos/Demo.cpp \
+    ../Sandbox/Producers/SpinVector.cpp \
+    ../Sandbox/Utilities/Math/PseudoInverse.cpp
 
 
 
@@ -57,7 +62,6 @@ HEADERS  += mainwindow.h \
     Configuration6DOF_Producer.h \
     PositionProducer.h \
     OrientationProducer.h \
-    ../OmniFrame2/arduino.h \
     Setup.h \
     ../Sandbox/Controls/DiscreteController.h \
     ../Sandbox/Devices/MultipleOmnimagnetSystem.h \
@@ -71,7 +75,12 @@ HEADERS  += mainwindow.h \
     Configuration5DOF_Producer.h \
     TransformationConfiguration5DOF_Producer.h \
     MagneticToolProducer.h \
-    SinglePerminantMagnetTool.h
+    SinglePerminantMagnetTool.h \
+    ArduinoSetup.h \
+    ../Sandbox/Demos/Field_and_Force_Demo.h \
+    ../Sandbox/Demos/Demo.h \
+    ../Sandbox/Producers/SpinVector.h \
+    ../Sandbox/Utilities/Math/PseudoInverse.h
 
 
 FORMS    += mainwindow.ui
