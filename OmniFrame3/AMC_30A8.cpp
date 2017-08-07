@@ -1,4 +1,4 @@
-#include "Devices/AMC_30A8.h"
+#include "AMC_30A8.h"
 
 #include <string>
 #include <ostream>
